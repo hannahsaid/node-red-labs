@@ -34,7 +34,7 @@ The nodes required to build this flow are:
   - A ![change](/introduction_to_node_red/images/node_red_change.png) node to extract the `imageurl` query parameter from the web request and assign it to the payload to be provided as input to the Alchemy Image Analysis node:  
  ![AlchVis-Lab-Change_and_IA-Node-Props](images/alchvis_change_and_ia_props.png)
 
-  - The ![`Alchemy Image Analysis`](images/node_red_alchemy_image_analysis.png) node. Make sure that you have installed and bound an instance of the `Alchemy API` ![AlchemyAPIService](images/alchemy_api_service.png) service to your Node-RED application in bluemix. Otherwise, you can edit the Alchemy Image Analysis node to provide an `apikey`.  
+  - The ![`Alchemy Image Analysis`](images/node_red_alchemy_image_analysis.png) node. Make sure that you have installed and bound an instance of the `Alchemy API` ![AlchemyAPIService](images/alchemy_api_service.png) service to your Node-RED application in bluemix. Otherwise, you can edit the Alchemy Image Analysis node to provide an `apikey`.  Next, edit the Alchemy Image Analysis node to specify to detect faces: ![`Detect`](images/alchvis_detect_faces.png)
  
   - A ![`template`](/introduction_to_node_red/images/node_red_template.png) node with the following content, which will format the output returned from the Image Analysis node into an HTML table for easier reading:  
 ```HTML
