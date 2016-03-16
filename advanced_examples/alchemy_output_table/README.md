@@ -35,7 +35,7 @@ See screenshot
 
 ![`Alchemychange](images/alchapi_table_change.jpg)
 
-Then the actual Alchemy Feature Extract node comes in. You can choose one of the features by using the check box. Iin this case I used Keywords. Remember this feature, it will be used later again.
+Then the actual Alchemy Feature Extract node comes in. You can choose one of the features by using the check box. In this case I used Keywords. Remember this feature, it will be used again later.
 
 ![`Alchemyfeature](images/alchapi_table_feature.jpg)
 
@@ -46,6 +46,11 @@ The next step is setting up a small function:
 Here you use 
 
            msg.features.keyword
+
+You can copy the code snippet:
+
+           msg.features_str=util.inspect(msg.features.keyword);
+           return msg;
 
 NOTE: the last part of this message can be changed to any other feature, but then you have to select another feature in the previous step.
 
@@ -63,12 +68,12 @@ These are the different features which can be used:
 - pub-date
 - doc-sentiment
 
-The following node is a 'template' node which contains the HTML to create the page. This page will have an inpout field an a button to push the text to the Alchemy API.
+The following node is a 'template' node which contains the HTML to create the page. This page will have an input field and a button to push the text to the Alchemy API.
 The HTML code can be downloaded [here](aapi_table_template1.txt) and looks like this:
 
 ![`Alchemytemplate1](images/alchapi_table_template1.jpg)
 
-Then another template is used is for putting the out put of the Alchemy API on the page:
+Then another template is used is for putting the output of the Alchemy API on the page:
 
 ![`Alchemytemplate2](images/alchapi_table_template2.jpg)
 
