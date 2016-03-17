@@ -8,7 +8,7 @@ by reusing the service developed in the Text_to_Speech lab ([lab_text_to_speech]
 The Alchemy Vision API returns a wealth of information when celebrities' faces are detected on an image, including their names and related web URLs. We will use this input, presented in the `identity` attribute to speak up the names.
 
 ## Prerequisite
-The text-to-speech audio service should be deployed at the `/tts/sayit` URL, using the flow from the TTS lab at [tts_lab_with_param_check.json](/basic_examples/text_to_speech/tts_lab_with_param_check.json)
+The text-to-speech audio service should be deployed at the `/text/sayit` URL, using the flow from the TTS lab at [tts_lab_webpage.json](/basic_examples/text_to_speech/tts_lab_webpage.json)
 
 We will then modify the Alchemy Vision Enhanced lab flow to add simple audio to it, so the base of this lab will be the flow from [alchvis_lab_webfaces_thumbs.json](/advanced_examples/alchemy_image_analysis_thumbs/alchvis_lab_webfaces_thumbs.json)
 
