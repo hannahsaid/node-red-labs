@@ -80,7 +80,7 @@ We added a new `HTTP input` node, listening on the `/talk` URL, and modified the
 When a text_to_say query parameter is set, we generate an HTML page with a \<audio> tag that refers to the `/talk/sayit` URL to get the audio `wav` file:
 ```HTML
     <h1>You want to say</h1>
-    <p><q>{{payload}}</q></p>
+    <p><q>{{payload.text_to_say}}</q></p>
     <p>Hear it:</p>
     <audio controls autoplay>
       <source src="{{req._parsedUrl.pathname}}/sayit?text_to_say={{payload.text_to_say}}" type="audio/wav">
@@ -91,8 +91,8 @@ When a text_to_say query parameter is set, we generate an HTML page with a \<aud
         <input type="submit" value="Try Again" />
     </form>
 ```
-![TTS-Lab-WebPage_Details2.png](images/tts_lab_web_page_details2.png)
+![TTS-Lab-WebPage_Details2.png](images/tts_lab_web_page_details2_V2.png)
 
 The complete flow is available at [TTS-Lab-WebPage](tts_lab_webpage.json).
 
-To run it, point your browser to  `/http://xxxx.mybluemix.net/tts/talk` and enter some text.
+To run it, point your browser to  `/http://xxxx.mybluemix.net/talk` and enter some text.
