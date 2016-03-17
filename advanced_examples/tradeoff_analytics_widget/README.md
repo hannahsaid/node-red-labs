@@ -83,6 +83,12 @@ What the \<script> section does is to:
 ### Dilemmas serving stream
 This flow on `tofaw/dilemmas` will make some parameters adjustments through a `change` node, setting `subject`, `columns` and `options` from the `payload`, storing the incoming `problem` for later use, and then calling the ![tradeoff analytics](images/node_red_trade_off_analytics.png) through its Node-RED service node. On return, another `change` node will adjust the returned payload parameters's `problem`and `resolution` to fit the format expected by the widget and return it as a JSON object.
 
+The first change node has 5 rules:  
+![](images/toff_5_rule_change_node.png)
+
+The second change node has 3 rules:  
+![](images/toff_3_rule_change_node.png)
+
 ### Events serving stream
 Notifications of events that happen on the widget will be received on that last stream at `/ tofaw/events`. Currently the flow does not do anything about the events, you can add a debug node to log the contents of the notifications.
 
